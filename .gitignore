@@ -1,14 +1,7 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+#root folder
+node_modules/**
+dist/**
 
-pids
-logs
-results
-
-npm-debug.log
+#sub folders
+**/node_modules/**
+**/dist/**
