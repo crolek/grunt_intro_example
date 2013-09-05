@@ -3,8 +3,8 @@ module.exports = function(grunt) {
 
 	// Project configuration.
 	grunt.initConfig({
-		copy : {
-			dist : {
+		copy: {
+			dist: {
 				expand: true,
 				cwd: "src/",
 				src: ["js/*", "css/**"],

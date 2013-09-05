@@ -13,6 +13,11 @@ module.exports = function(grunt) {
 				files: [
 					{"dist/css/common.css": "src/less/*.less"}
 				]
+			},
+			someTaskWeNeverWantToRun: {
+				files: [
+					{"filesThatDontExist": "becauseWeWillNeverRunThis"}
+				]
 			}
 		},
 	});
