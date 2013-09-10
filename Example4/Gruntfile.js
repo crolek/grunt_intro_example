@@ -26,7 +26,7 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
-			onlyWatchingTheHtmlFile: {
+			onlyhtml: {
 				files: ["src/test.html"],
 				tasks: ["concat", "less"]
 			},
