@@ -14,3 +14,4 @@ Once you've done that all you need to do is open a command prompt to where you'v
 * Example2: Compiling Less files
 * Example3: Minifying/Aggregating CSS and JS using multple tasks.
 * Example4: Grunt Watch - bringing it all together!
+* StopDoingThingsManually - my "admin" project of sort for managing all the examples.

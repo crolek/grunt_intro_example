@@ -2,7 +2,7 @@
 This example will show you how you'd setup a minified and non-minified version of css and js. Technically this is only a minor increase from Example2, but I think it was important enough to split out so certain parts can be clear.
 
 #Example3 Explained
-Debugging minified javascript is a pain, so its always nice to do development against an unminified code. In this example we'll be taking multiple Less files and compiling them into one CSS file, and then minifying them. We'll also be taking multiple JS files, concatenating them together, and then minifying them.
+Debugging minified javascript is a pain, so its always nice to do development against an unminified code. In this example we'll be taking multiple LESS files and compiling them into one CSS file, and then minifying them. We'll also be taking multiple JS files, concatenating them together, and then minifying them.
 
 The first task is the one that does the JS file concatenation:
 	
@@ -13,9 +13,9 @@ The first task is the one that does the JS file concatenation:
 		}
 	},
 	
-You might normally use this to concatanate CSS files if you were not already using a Less compiler. However, since I am using a Less compiler I'll just use it to concatenate all of the JS files.
+You might normally use this to concatanate CSS files if you were not already using a LESS compiler. However, since I am using a LESS compiler I'll just use it to concatenate all of the JS files.
 
-The Less task you already saw in Example2.
+The LESS task you already saw in Example2.
 
 The javascript uglify task is the next one:
 
@@ -30,7 +30,7 @@ The uglify task does basically what any other javascript uglifier/minifier does.
 
 
 
-I setup this Grunt file so when `grunt prod` is run an unminified version of the file will be created, and another minified verison of the file will be made. This way I can keep track of both version as I needed. The grunt task will first run the JS concatenator so that all the javascript files are turned into `dist/js/all-js.js`. Next the Less files will be compiled into `dist/css/common.css` much like Example2. However, the next two steps take those finished files, minify them, and save a copy off with thte word "min" in it. So `all-js.js` becomes `all-js.min.js`, and `common.css` becomes `common.min.css`.
+I setup this Grunt file so when `grunt prod` is run an unminified version of the file will be created, and another minified verison of the file will be made. This way I can keep track of both version as I needed. The grunt task will first run the JS concatenator so that all the javascript files are turned into `dist/js/all-js.js`. Next the LESS files will be compiled into `dist/css/common.css` much like Example2. However, the next step takes the finished JS file, minifies it, and then saves a copy off with thte word "min" in it. So `all-js.js` becomes `all-js.min.js`.
 
 
 I think if you go with a two file setup (one minified, one not) that its important to create 2 different Grunt tasks. One with the minification and one without it that way if you need an unminified version of the file(s) you don't have to monkey with your primary grunt task.
@@ -43,4 +43,7 @@ I think if you go with a two file setup (one minified, one not) that its importa
 
 
 #Additional Notes
-For more information on the [.]()
+For more information visit the following links:
+
+* [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
+* [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)

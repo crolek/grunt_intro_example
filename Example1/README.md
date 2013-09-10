@@ -25,7 +25,7 @@ somewhere, but don't want to type that long path each time.
 The src section can be a single file, array of files, or match a pattern. 
 Remember, because I used cwd above the current path is: `src/`
 The `css/**` piece tells Grunt to not only look in the root of the css folder, 
-also copy the contents of all of the sub folders.
+also copy the contents of all of the sub folders. This configuration uses the [dynamic file objects feature](http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically) and the [global pattern syntax](http://gruntjs.com/configuring-tasks#globbing-patterns). 
 
 `src: ["js/*", "css/**"],`
 
@@ -47,4 +47,10 @@ To "run" a Grunt task you use a simple syntax of the word grunt and the task nam
 `grunt prod` will move the CSS and JS assets to the `/dist` folder.
 
 #Additional Notes
-For more information on the [grunt-contrib-copy make sure to visit their github page.](https://github.com/gruntjs/grunt-contrib-copy)
+For more information visit the following links:
+
+* [grunt-contrib-copy make sure to visit their github page.](https://github.com/gruntjs/grunt-contrib-copy)
+
+* [dynamic file objects feature](http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically) 
+
+* [global pattern syntax](http://gruntjs.com/configuring-tasks#globbing-patterns)
