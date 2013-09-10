@@ -1,0 +1,157 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>doc</title>
+    <style>
+      /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
+      pre code {
+        display: block; padding: 0.5em;
+        color: #333;
+        background: #f8f8ff
+      }
+      pre .comment,
+      pre .template_comment,
+      pre .diff .header,
+      pre .javadoc {
+        color: #998;
+        font-style: italic
+      }
+      pre .keyword,
+      pre .css .rule .keyword,
+      pre .winutils,
+      pre .javascript .title,
+      pre .nginx .title,
+      pre .subst,
+      pre .request,
+      pre .status {
+        color: #333;
+        font-weight: bold
+      }
+      pre .number,
+      pre .hexcolor,
+      pre .ruby .constant {
+        color: #099;
+      }
+      pre .string,
+      pre .tag .value,
+      pre .phpdoc,
+      pre .tex .formula {
+        color: #d14
+      }
+      pre .title,
+      pre .id {
+        color: #900;
+        font-weight: bold
+      }
+      pre .javascript .title,
+      pre .lisp .title,
+      pre .clojure .title,
+      pre .subst {
+        font-weight: normal
+      }
+      pre .class .title,
+      pre .haskell .type,
+      pre .vhdl .literal,
+      pre .tex .command {
+        color: #458;
+        font-weight: bold
+      }
+      pre .tag,
+      pre .tag .title,
+      pre .rules .property,
+      pre .django .tag .keyword {
+        color: #000080;
+        font-weight: normal
+      }
+      pre .attribute,
+      pre .variable,
+      pre .lisp .body {
+        color: #008080
+      }
+      pre .regexp {
+        color: #009926
+      }
+      pre .class {
+        color: #458;
+        font-weight: bold
+      }
+      pre .symbol,
+      pre .ruby .symbol .string,
+      pre .lisp .keyword,
+      pre .tex .special,
+      pre .prompt {
+        color: #990073
+      }
+      pre .built_in,
+      pre .lisp .title,
+      pre .clojure .built_in {
+        color: #0086b3
+      }
+      pre .preprocessor,
+      pre .pi,
+      pre .doctype,
+      pre .shebang,
+      pre .cdata {
+        color: #999;
+        font-weight: bold
+      }
+      pre .deletion {
+        background: #fdd
+      }
+      pre .addition {
+        background: #dfd
+      }
+      pre .diff .change {
+        background: #0086b3
+      }
+      pre .chunk {
+        color: #aaa
+      }
+    </style>
+  </head>
+  <body>  
+    <h1>Example1 Goals</h1>
+<p>This example will show you one of the simplest things you can do with Grunt. One is define a custom task (this is the <code>grunt prod</code> task), and the other is configuring the Copy Task.</p>
+<h1>Example1 Explained</h1>
+<p>This is the start of the grunt-contrib-copy task. The part that starts with <code>dist: {</code> is where you start setup the <code>dist</code> configuration for the <code>copy</code> task. Each task can have multiple configurations. You&#39;ll see how this comes in handy later.</p>
+<pre><code>copy: { /* start of the copy task */
+    dist: { /* start of the dist configuration */
+        expand: true,
+        cwd: &quot;src/&quot;,
+        src: [&quot;js/*&quot;, &quot;css/**&quot;],
+        dest: &quot;dist/&quot;
+    } /* end of dist configuration */
+} /* end of copy task */</code></pre>
+<p>Expand turns on dynamic file expansion.</p>
+<p><code>expand: true,</code></p>
+<p>The cwd (Current Working Directory) is useful for when you need to path
+somewhere, but don&#39;t want to type that long path each time.</p>
+<p><code>cwd: &quot;src/&quot;,</code></p>
+<p>The src section can be a single file, array of files, or match a pattern. 
+Remember, because I used cwd above the current path is: <code>src/</code>
+The <code>css/**</code> piece tells Grunt to not only look in the root of the css folder, 
+also copy the contents of all of the sub folders. This configuration uses the <a href="http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically">dynamic file objects feature</a> and the <a href="http://gruntjs.com/configuring-tasks#globbing-patterns">global pattern syntax</a>. </p>
+<p><code>src: [&quot;js/*&quot;, &quot;css/**&quot;],</code></p>
+<p>The dest (destination) is simply where the files will go after the task is done. In this
+case the task is to simply copy and paste the file to that directory. </p>
+<p><code>dest: &quot;dist/&quot;</code></p>
+<p>Below is how you&#39;d register a custom task with Grunt. Registering a task with Grunt is essentially grouping  set of tasks into one name that you can use for later execution. A Grunt task can have one or many tasks; in the example below it&#39;ll only do one task and that is the <code>copy</code> task.</p>
+<p><code>grunt.registerTask(&quot;prod&quot;, [&quot;copy&quot;]);</code></p>
+<p>To &quot;run&quot; a Grunt task you use a simple syntax of the word grunt and the task name. In this case I named the task &quot;prod&quot;, so to run this example type <code>grunt prod</code> into your command line window (after you did the <code>npm install</code>).</p>
+<h1>To run this Example</h1>
+<p><code>grunt prod</code> will move the CSS and JS assets to the <code>/dist</code> folder.</p>
+<h1>Additional Notes</h1>
+<p>For more information visit the following links:</p>
+<ul>
+<li><p><a href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy make sure to visit their github page.</a></p>
+</li>
+<li><p><a href="http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically">dynamic file objects feature</a> </p>
+</li>
+<li><p><a href="http://gruntjs.com/configuring-tasks#globbing-patterns">global pattern syntax</a></p>
+</li>
+</ul>
+
+  </body>
+</html>

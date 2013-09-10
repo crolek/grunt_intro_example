@@ -1,0 +1,19 @@
+{
+	"name": "grunt_intro_example",
+	"preferGlobal": true,
+	"version": "1.0.0",
+	"author": "chuck@chuckrolek.com",
+	"description": "a simple config for our grunt tasks",
+	"contributors": [ 
+		{
+			"name": "Chuck Rolek",
+			"email": "chuck@chuckrolek.com"
+		} 
+	],
+	"dependencies" : {
+		"grunt":							"0.4.1",
+		"grunt-contrib-clean":				"0.5.0",
+		"grunt-contrib-watch":				"0.3.1",
+		"grunt-markdown": 					"0.4.0"
+	}
+}
