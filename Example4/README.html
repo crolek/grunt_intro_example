@@ -112,14 +112,31 @@
     </style>
   </head>
   <body>  
-    <h1>Example4 Goals</h1>
-<p>A you ready to &quot;watch&quot; something cool happen!? So you&#39;ve got all of these awesome Grunt tasks, but who wants to type <code>grunt dev</code> each time they&#39;re working on something? Not me, so more than likely not you. This example will show you how to make it so Grunt tracks your file changes and runs any task(s) you want automatically.</p>
-<h1>Example4 Explained</h1>
-<p>Before I get into the Watch command I want to try and clarify something up front. The files that Grunt Watches do not have to be the same files that are associated with that task you want run (most of the time they will be, but its not required). For example you could have Grunt compile Less files on any change done to an HTML file. It might seem wasteful, but there is probably a perfect case for it. Again, commonly when you configure the Watch you will probably have it the same files that the actual task is associated with. It&#39;ll look redudant, but I&#39;ll do my best to explain it clearly below.</p>
-<h1>Additional Notes</h1>
+    <h1 id="example4-goals">Example4 Goals</h1>
+<p>A you ready to &quot;watch&quot; something cool happen!? So you&#39;ve got all of these awesome Grunt tasks, but who wants to type <code>grunt dev</code> (or whatever) each time they&#39;re working on something? Not me, so more than likely not you. This example will show you how to make it so Grunt tracks your file changes and runs any task(s) you want automatically.</p>
+<h1 id="example4-explained">Example4 Explained</h1>
+<p>Before I get into the Watch command I want to try and clarify something up front. The files that Grunt &quot;watches&quot; do not have to be the same files that are associated with that task you want run (most of the time they will be, but its not required). For example you could have Grunt compile Less files on any change done to an HTML file. It might seem wasteful, but there is probably a perfect case for it. Again, commonly when you configure the Watch you will probably have it the same files that the actual task is associated with. It&#39;ll look redudant, but I&#39;ll do my best to explain it clearly below.</p>
+<p>In each Watch configuration you need to pick what files the task needs to watch and what tasks to run.</p>
+<pre><code>onlyhtml: {
+    files: [&quot;src/test.html&quot;],
+    tasks: [&quot;concat&quot;, &quot;less&quot;]
+},</code></pre>
+<p>Above is the confugation for <code>onlyhtml</code>. The Grunt Watch feature will only trigger when you save the <code>src/test.html</code> file. When you save the the test.html file it will run the <code>concat</code> and <code>less</code> task. Do an <code>npm install</code>, and then type <code>grunt watch:onlyhtml</code>. when you do this you&#39;ll see a message like <code>Waiting...</code>. This is Grunt Watch&#39;s way of telling you that its waiting for you to save a file. When save that file it&#39;ll run those tasks, and upon completion go back into the <code>Waiting...</code> state.</p>
+<p>The Watch task has a <code>dev</code> and <code>prod</code> Watch configuration. The names of these configurations do not have to match the names used in the <code>grunt.registerTask(&quot;...&quot;)</code>. </p>
+<h1 id="to-run-this-example">To run this Example</h1>
+<p>Run <code>npm install</code> to get the required node_modules.</p>
+<p><code>grunt dev</code> will generate an unminified set of aggregated CSS and JS assets</p>
+<p><code>grunt prod</code> will generate an unminifed and minified set of aggregated CSS and JS assets</p>
+<p><code>grunt watch</code> will run the last configuration in the <code>watch</code> task. (In this case it would be <code>watch:prod</code>)</p>
+<p><code>grunt watch:dev</code> will be the same as <code>grunt dev</code>, but using the Watch feature.</p>
+<p><code>grunt watch:prod</code> will be the same as <code>grunt prod</code>, but using the Watch feature.</p>
+<h1 id="additional-notes">Additional Notes</h1>
 <p>For more information visit the following links:</p>
 <ul>
-<li><a href="">.</a></li>
+<li><p><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a></p>
+</li>
+<li><p><a href="http://sourcegraph.com/github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch on Sourcegraph.com</a></p>
+</li>
 </ul>
 
   </body>

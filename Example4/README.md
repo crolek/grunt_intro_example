@@ -17,6 +17,8 @@ The Watch task has a `dev` and `prod` Watch configuration. The names of these co
 
 #To run this Example
 
+Run `npm install` to get the required node_modules.
+
 `grunt dev` will generate an unminified set of aggregated CSS and JS assets
 
 `grunt prod` will generate an unminifed and minified set of aggregated CSS and JS assets
@@ -32,3 +34,5 @@ The Watch task has a `dev` and `prod` Watch configuration. The names of these co
 For more information visit the following links:
 
 * [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+
+* [grunt-contrib-watch on Sourcegraph.com](http://sourcegraph.com/github.com/gruntjs/grunt-contrib-watch)

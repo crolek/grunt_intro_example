@@ -112,9 +112,9 @@
     </style>
   </head>
   <body>  
-    <h1>Example1 Goals</h1>
+    <h1 id="example1-goals">Example1 Goals</h1>
 <p>This example will show you one of the simplest things you can do with Grunt. One is define a custom task (this is the <code>grunt prod</code> task), and the other is configuring the Copy Task.</p>
-<h1>Example1 Explained</h1>
+<h1 id="example1-explained">Example1 Explained</h1>
 <p>This is the start of the grunt-contrib-copy task. The part that starts with <code>dist: {</code> is where you start setup the <code>dist</code> configuration for the <code>copy</code> task. Each task can have multiple configurations. You&#39;ll see how this comes in handy later.</p>
 <pre><code>copy: { /* start of the copy task */
     dist: { /* start of the dist configuration */
@@ -140,12 +140,15 @@ case the task is to simply copy and paste the file to that directory. </p>
 <p>Below is how you&#39;d register a custom task with Grunt. Registering a task with Grunt is essentially grouping  set of tasks into one name that you can use for later execution. A Grunt task can have one or many tasks; in the example below it&#39;ll only do one task and that is the <code>copy</code> task.</p>
 <p><code>grunt.registerTask(&quot;prod&quot;, [&quot;copy&quot;]);</code></p>
 <p>To &quot;run&quot; a Grunt task you use a simple syntax of the word grunt and the task name. In this case I named the task &quot;prod&quot;, so to run this example type <code>grunt prod</code> into your command line window (after you did the <code>npm install</code>).</p>
-<h1>To run this Example</h1>
+<h1 id="to-run-this-example">To run this Example</h1>
+<p>Run <code>npm install</code> to get the required node_modules.</p>
 <p><code>grunt prod</code> will move the CSS and JS assets to the <code>/dist</code> folder.</p>
-<h1>Additional Notes</h1>
+<h1 id="additional-notes">Additional Notes</h1>
 <p>For more information visit the following links:</p>
 <ul>
 <li><p><a href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy make sure to visit their github page.</a></p>
+</li>
+<li><p><a href="http://sourcegraph.com/github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy on Sourcegraph.com</a></p>
 </li>
 <li><p><a href="http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically">dynamic file objects feature</a> </p>
 </li>

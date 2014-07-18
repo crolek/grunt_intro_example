@@ -42,4 +42,6 @@ For more information visit the following links:
 
 * [grunt-contrib-less make sure to visit their github page.](https://github.com/gruntjs/grunt-contrib-less)
 
+* [grunt-contrib-less on Sourcegraph.com](http://sourcegraph.com/github.com/gruntjs/grunt-contrib-less)
+
 * [configuring tasks](http://gruntjs.com/configuring-tasks)

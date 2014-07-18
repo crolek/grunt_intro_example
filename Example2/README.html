@@ -112,9 +112,9 @@
     </style>
   </head>
   <body>  
-    <h1>Example2 Goals</h1>
+    <h1 id="example2-goals">Example2 Goals</h1>
 <p>This example will compile a single LESS file into one CSS file and the other task will take multiple LESS files and compile them into one file. In this example you&#39;ll see there are two different configurations for one Grunt task.</p>
-<h1>Example2 Explained</h1>
+<h1 id="example2-explained">Example2 Explained</h1>
 <p>In this example I setup 2 different Grunt configurations under the <code>less</code> task. 
 The first configuration is:</p>
 <pre><code>onlyFile1: {
@@ -135,13 +135,15 @@ The first configuration is:</p>
 grunt.registerTask(&quot;prod&quot;, [&quot;less:allFiles&quot;]);</code></pre>
 <p>In both tasks there is the word <code>less</code>, a colon, and the sub-tasks (<code>onlyFile1</code>, or <code>allfiles</code>). This is where I think Grunt becomes really awesome. What Grunt is allowing me to do is point directly at a specific configuration instead of the task as a whole. So if I registered: <code>grunt.registerTask(&quot;prod&quot;, [&quot;less&quot;]);</code> it would run all configurations inside of the <code>less</code> task no matter how many there are. Using the <code>:</code> helps tell Grunt which tasks to specifically run. This is awesome because you can chain these together if you need to:</p>
 <pre><code>grunt.registerTask(&quot;prod&quot;, [&quot;less:allFiles&quot;, &quot;less:someOtherTask&quot;, &quot;less:anotherTask&quot;]);</code></pre>
-<h1>To run this Example</h1>
+<h1 id="to-run-this-example">To run this Example</h1>
 <p><code>grunt onlyfileone</code> will compile only one LESS file</p>
 <p><code>grunt prod</code> will compile all of the LESS files</p>
-<h1>Additional Notes</h1>
+<h1 id="additional-notes">Additional Notes</h1>
 <p>For more information visit the following links:</p>
 <ul>
 <li><p><a href="https://github.com/gruntjs/grunt-contrib-less">grunt-contrib-less make sure to visit their github page.</a></p>
+</li>
+<li><p><a href="http://sourcegraph.com/github.com/gruntjs/grunt-contrib-less">grunt-contrib-less on Sourcegraph.com</a></p>
 </li>
 <li><p><a href="http://gruntjs.com/configuring-tasks">configuring tasks</a></p>
 </li>

@@ -37,6 +37,8 @@ I think if you go with a two file setup (one minified, one not) that its importa
 
 #To run this Example
 
+Run `npm install` to get the required node_modules.
+
 `grunt dev` will generate an unminified set of aggregated CSS and JS assets
 
 `grunt prod` will generate an unminifed and minified set of aggregated CSS and JS assets
@@ -46,4 +48,9 @@ I think if you go with a two file setup (one minified, one not) that its importa
 For more information visit the following links:
 
 * [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
+
 * [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+
+* [grunt-contrib-concat on Sourcegraph.com](http://sourcegraph.com/github.com/gruntjs/grunt-contrib-concat)
+
+* [grunt-contrib-uglify on Sourcegraph.com](http://sourcegraph.com/github.com/gruntjs/grunt-contrib-uglify)

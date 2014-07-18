@@ -112,10 +112,10 @@
     </style>
   </head>
   <body>  
-    <h1>Example3 Goals</h1>
+    <h1 id="example3-goals">Example3 Goals</h1>
 <p>This example will show you how you&#39;d setup a minified and non-minified version of css and js. Technically this is only a minor increase from Example2, but I think it was important enough to split out so certain parts can be clear.</p>
-<h1>Example3 Explained</h1>
-<p>Debugging minified javascript is a pain, so its always nice to do development against an unminified code. In this example we&#39;ll be taking multiple Less files and compiling them into one CSS file, and then minifying them. We&#39;ll also be taking multiple JS files, concatenating them together, and then minifying them.</p>
+<h1 id="example3-explained">Example3 Explained</h1>
+<p>Debugging minified javascript is a pain, so its always nice to do development against an unminified code. In this example we&#39;ll be taking multiple LESS files and compiling them into one CSS file, and then minifying them. We&#39;ll also be taking multiple JS files, concatenating them together, and then minifying them.</p>
 <p>The first task is the one that does the JS file concatenation:</p>
 <pre><code>concat: {
     prod: {
@@ -123,8 +123,8 @@
         dest: &quot;dist/js/all-js.js&quot;
     }
 },</code></pre>
-<p>You might normally use this to concatanate CSS files if you were not already using a Less compiler. However, since I am using a Less compiler I&#39;ll just use it to concatenate all of the JS files.</p>
-<p>The Less task you already saw in Example2.</p>
+<p>You might normally use this to concatanate CSS files if you were not already using a LESS compiler. However, since I am using a LESS compiler I&#39;ll just use it to concatenate all of the JS files.</p>
+<p>The LESS task you already saw in Example2.</p>
 <p>The javascript uglify task is the next one:</p>
 <pre><code>uglify: {
     js: {
@@ -133,15 +133,23 @@
     }
 }</code></pre>
 <p>The uglify task does basically what any other javascript uglifier/minifier does. This specific uglifier can do 1 of two things. It can aggregate the files and uglify them, or it can just uglify specific files. I&#39;m going with just having it uglify specific files because I&#39;d like to also have a non-minified version of the files.</p>
-<p>I setup this Grunt file so when <code>grunt prod</code> is run an unminified version of the file will be created, and another minified verison of the file will be made. This way I can keep track of both version as I needed. The grunt task will first run the JS concatenator so that all the javascript files are turned into <code>dist/js/all-js.js</code>. Next the Less files will be compiled into <code>dist/css/common.css</code> much like Example2. However, the next two steps take those finished files, minify them, and save a copy off with thte word &quot;min&quot; in it. So <code>all-js.js</code> becomes <code>all-js.min.js</code>, and <code>common.css</code> becomes <code>common.min.css</code>.</p>
+<p>I setup this Grunt file so when <code>grunt prod</code> is run an unminified version of the file will be created, and another minified verison of the file will be made. This way I can keep track of both version as I needed. The grunt task will first run the JS concatenator so that all the javascript files are turned into <code>dist/js/all-js.js</code>. Next the LESS files will be compiled into <code>dist/css/common.css</code> much like Example2. However, the next step takes the finished JS file, minifies it, and then saves a copy off with thte word &quot;min&quot; in it. So <code>all-js.js</code> becomes <code>all-js.min.js</code>.</p>
 <p>I think if you go with a two file setup (one minified, one not) that its important to create 2 different Grunt tasks. One with the minification and one without it that way if you need an unminified version of the file(s) you don&#39;t have to monkey with your primary grunt task.</p>
-<h1>To run this Example</h1>
+<h1 id="to-run-this-example">To run this Example</h1>
+<p>Run <code>npm install</code> to get the required node_modules.</p>
 <p><code>grunt dev</code> will generate an unminified set of aggregated CSS and JS assets</p>
 <p><code>grunt prod</code> will generate an unminifed and minified set of aggregated CSS and JS assets</p>
-<h1>Additional Notes</h1>
+<h1 id="additional-notes">Additional Notes</h1>
 <p>For more information visit the following links:</p>
 <ul>
-<li><a href="">.</a></li>
+<li><p><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a></p>
+</li>
+<li><p><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></p>
+</li>
+<li><p><a href="http://sourcegraph.com/github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat on Sourcegraph.com</a></p>
+</li>
+<li><p><a href="http://sourcegraph.com/github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify on Sourcegraph.com</a></p>
+</li>
 </ul>
 
   </body>
