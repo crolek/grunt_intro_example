@@ -44,12 +44,16 @@ To "run" a Grunt task you use a simple syntax of the word grunt and the task nam
 
 #To run this Example
 
+Run `npm install` to get the required node_modules.
+
 `grunt prod` will move the CSS and JS assets to the `/dist` folder.
 
 #Additional Notes
 For more information visit the following links:
 
 * [grunt-contrib-copy make sure to visit their github page.](https://github.com/gruntjs/grunt-contrib-copy)
+
+* [grunt-contrib-copy on Sourcegraph.com](http://sourcegraph.com/github.com/gruntjs/grunt-contrib-copy)
 
 * [dynamic file objects feature](http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically) 
 
