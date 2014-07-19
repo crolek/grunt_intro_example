@@ -133,9 +133,10 @@ The first configuration is:</p>
 <p>One difference from Example1 that you&#39;ll notice is how I registerd the Grunt tasks.</p>
 <pre><code>grunt.registerTask(&quot;onlyfileone&quot;, [&quot;less:onlyFile1&quot;]);
 grunt.registerTask(&quot;prod&quot;, [&quot;less:allFiles&quot;]);</code></pre>
-<p>In both tasks there is the word <code>less</code>, a colon, and the sub-tasks (<code>onlyFile1</code>, or <code>allfiles</code>). This is where I think Grunt becomes really awesome. What Grunt is allowing me to do is point directly at a specific configuration instead of the task as a whole. So if I registered: <code>grunt.registerTask(&quot;prod&quot;, [&quot;less&quot;]);</code> it would run all configurations inside of the <code>less</code> task no matter how many there are. Using the <code>:</code> helps tell Grunt which tasks to specifically run. This is awesome because you can chain these together if you need to:</p>
+<p>In both tasks there is the word <code>less</code>, a colon, and the sub-configuration (<code>onlyFile1</code>, or <code>allfiles</code>). This is where I think Grunt becomes really awesome. What Grunt is allowing me to do is point directly at a specific configuration instead of the task as a whole. So if I registered: <code>grunt.registerTask(&quot;prod&quot;, [&quot;less&quot;]);</code> it would run all configurations inside of the <code>less</code> task no matter how many there are. Using the <code>:</code> helps tell Grunt which tasks to specifically run. This is awesome because you can chain these together if you need to:</p>
 <pre><code>grunt.registerTask(&quot;prod&quot;, [&quot;less:allFiles&quot;, &quot;less:someOtherTask&quot;, &quot;less:anotherTask&quot;]);</code></pre>
 <h1 id="to-run-this-example">To run this Example</h1>
+<p>Run <code>npm install</code> to get the required node_modules.</p>
 <p><code>grunt onlyfileone</code> will compile only one LESS file</p>
 <p><code>grunt prod</code> will compile all of the LESS files</p>
 <h1 id="additional-notes">Additional Notes</h1>

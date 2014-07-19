@@ -19,6 +19,9 @@ Reveal.addEventListener( 'ready', function() {
 	test( 'Initial slides classes', function() {
 		var horizontalSlides = document.querySelectorAll( '.reveal .slides>section' )
 
+		ok(false, "noise");
+
+		
 		strictEqual( document.querySelectorAll( '.reveal .slides section.past' ).length, 0, 'no .past slides' );
 		strictEqual( document.querySelectorAll( '.reveal .slides section.present' ).length, 1, 'one .present slide' );
 		strictEqual( document.querySelectorAll( '.reveal .slides>section.future' ).length, horizontalSlides.length - 1, 'remaining horizontal slides are .future' );

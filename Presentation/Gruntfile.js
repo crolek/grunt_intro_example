@@ -104,6 +104,10 @@ module.exports = function(grunt) {
 			theme: {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
 				tasks: 'themes'
+			},
+			qunit: {
+				files: ["test/*.js"],
+				tasks: "qunit"
 			}
 		}
 

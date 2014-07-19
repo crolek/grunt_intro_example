@@ -28,11 +28,14 @@ One difference from Example1 that you'll notice is how I registerd the Grunt tas
 	grunt.registerTask("onlyfileone", ["less:onlyFile1"]);
 	grunt.registerTask("prod", ["less:allFiles"]);
 
-In both tasks there is the word `less`, a colon, and the sub-tasks (`onlyFile1`, or `allfiles`). This is where I think Grunt becomes really awesome. What Grunt is allowing me to do is point directly at a specific configuration instead of the task as a whole. So if I registered: `grunt.registerTask("prod", ["less"]);` it would run all configurations inside of the `less` task no matter how many there are. Using the `:` helps tell Grunt which tasks to specifically run. This is awesome because you can chain these together if you need to:
+In both tasks there is the word `less`, a colon, and the sub-configuration (`onlyFile1`, or `allfiles`). This is where I think Grunt becomes really awesome. What Grunt is allowing me to do is point directly at a specific configuration instead of the task as a whole. So if I registered: `grunt.registerTask("prod", ["less"]);` it would run all configurations inside of the `less` task no matter how many there are. Using the `:` helps tell Grunt which tasks to specifically run. This is awesome because you can chain these together if you need to:
 
 	grunt.registerTask("prod", ["less:allFiles", "less:someOtherTask", "less:anotherTask"]);
 
 #To run this Example
+
+Run `npm install` to get the required node_modules.
+
 `grunt onlyfileone` will compile only one LESS file
 
 `grunt prod` will compile all of the LESS files

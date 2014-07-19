@@ -26,6 +26,10 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
+			everything: {
+				files: ["src/**"],
+				tasks: ["concat", "less", "uglify"]
+			},
 			onlyhtml: {
 				files: ["src/test.html"],
 				tasks: ["concat", "less"]
